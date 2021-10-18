@@ -21,12 +21,11 @@
     <!-- Nav -->
     <nav class="mynav">
       <div class="nav-wrapper container">
-        <a href="/"
-          ><img src="bbi-logo.png" alt="Universe" class="brand-logo"
-        /></a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
+        <a href="/"><img src="bbi-logo.png" alt="Universe" class="brand-logo" /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a class="btn transparent" href="/bank">Check Donors</a></li>
           <li><a class="btn transparent" href="/logout">Log Out</a></li>
@@ -35,9 +34,7 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li>
-        <a class="btn red" href="/bank?blood=&city=&zeros=on">Check Donors</a>
-      </li>
+      <li><a class="btn red" href="/bank?blood=&city=&zeros=on">Check Donors</a></li>
       <li><a class="btn red" href="/logout">Log Out</a></li>
     </ul>
 
@@ -50,7 +47,7 @@
       </p>
     </div>
     <div class="row center">
-      <form action="/donate" method="post" id="amountForm">
+      <form action="/donate" method="POST" id="amountForm">
         <input
           required
           id="amount"
@@ -64,12 +61,12 @@
         <a
           onclick="document.getElementById('amountForm').submit();"
           class="btn-floating btn-large waves-effect waves-light red"
-          ><i class="material-icons">add</i></a
-        >
+          ><i class="material-icons">add</i>
+        </a>
       </form>
 
       <h3 class="indigo-text container flow-text">
-        Last donated <%= user.lastDonated.toLocaleString(undefined, {timeZone: 'Asia/Kolkata'}) %>
+        Last donated <%= user.lastDonated.toLocaleString('en-GB', {timeZone: 'Asia/Kolkata'}) %>
       </h3>
     </div>
 

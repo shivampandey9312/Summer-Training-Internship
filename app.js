@@ -8,7 +8,6 @@ var FileStore = require('session-file-store')(session);
 
 //routers
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var registerRouter = require('./routes/register');
 var donateRouter = require('./routes/donate');
 var bankRouter = require('./routes/bank');
@@ -74,7 +73,6 @@ app.use(express.static('public/json'));
 
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/login',loginRouter);
 app.use('/register', registerRouter);
 app.use('/logout', logoutRouter);
