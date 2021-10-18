@@ -69,7 +69,7 @@
       </form>
 
       <h3 class="indigo-text container flow-text">
-        Last donated <%= user.lastDonated %>
+        Last donated <%= user.lastDonated.toLocaleString(undefined, {timeZone: 'Asia/Kolkata'}) %>
       </h3>
     </div>
 
