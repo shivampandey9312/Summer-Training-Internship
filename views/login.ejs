@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="Description"
+			content="Author: Shivam Pandey, Purpose: Summer Training Internship Project.">
+		<title>BloodBank</title>
+
+		<!-- Compiled latest Css -->
+		<link rel="stylesheet" href="materialize.min.css" />
+
+		<!--Import Google Icon Font-->
+		<link href="icon.css" rel="stylesheet" />
+
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+
+	<body>
+		<!-- Nav -->
+		<nav class="mynav">
+			<div class="nav-wrapper container">
+				<a href="/"><img src="bbi-logo.png" alt="Universe" class="brand-logo"></a>
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li style="color:yellow"><%=err.msg1%></li>
+					<li><a class="btn transparent" href="/register">Register</a></li>
+					<!-- <li><a class="btn transparent" href="/bank">Check Donors</a></li> -->
+				</ul>
+			</div>
+		</nav>
+
+		<ul class="sidenav" id="mobile-demo">
+			<li style="color:yellow"><%=err.msg1%></li>
+			<li><a class="btn red" href="/register">Register</a></li>
+			<!-- <li><a class="btn red" href="/bank?blood=&city=&zeros=on">Search Donors</a></li> -->
+		</ul>
+
+
+		<!-- Crap -->
+		<div class="center white-text">
+			<h4>Login</h4>
+		</div>
+		<div class="row container" style="margin-top: 20px;">
+			<!--form data retreival-->
+			<form class="col s12 l5 white-text" action="/login" method="POST" autocomplete="new-password">
+
+				<div class="row">
+					<div class="input-field col l12 s12">
+						<!-- Phone -->
+						<label class="white-text">Phone</label>
+						<input autocomplete="new-password" class="white-text" required placeholder="Contact Number" id="phone"
+							name="phone" type="text" pattern="[789][0-9]{9}" class="validate">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="input-field col l12 s12">
+						<!-- Password -->
+						<label class="white-text" for="">Password</label>
+						<input autocomplete="new-password" class="white-text" required placeholder="Password" id="password"
+							name="password" type="password" class="validate">
+					</div>
+				</div>
+					
+						<!--Confirmation & Register and Reset Buttons-->
+				<div class="center">
+					<button class="btn waves-effect waves-light red lighten-1" type="submit">Login
+						<i class="material-icons right">send</i>
+					</button>
+				</div>
+                <div class = "center">
+                    <p><h4 style="color:yellow"><%=err.msg2%></h4></p>
+                </div>
+			</form>
+			<div class="col l6 hide-on-med-and-down offset-l1 center">
+				<img src="donate.jpg" alt="Donate" class="center">
+			</div>
+		</div>
+		
+		<!--Import Font Awesome-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+			integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		</link>
+		<!-- Footer -->
+		<footer class="page-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m8 l9">
+						<h5 class="white-text">About me!</h5>
+						<p class="grey-text text-lighten-4">SHIVAM PANDEY</p>
+						<p class="grey-text text-lighten-4">Summer Training Internship Project.</p>
+					</div>
+					<div class="col s12 m4 l3">
+						<h5 class="white-text">Contact</h5>
+						<ul>
+							<li><i class="fab fa-facebook"></i><a class="grey-text text-lighten-4"
+									href="https://www.facebook.com/profile.php?id=100008959362996"> Facebook</a></li>
+							<li><i class="fab fa-instagram"></i><a class="grey-text text-lighten-4"
+									href="https://www.instagram.com/shivampandey9312/"> Instagram</a></li>
+							<li><i class="fab fa-github"></i><a class="grey-text text-lighten-4" href="https://github.com/shivampandey9312">
+									Github</a></li>
+							<li><i class="fab fa-whatsapp"></i><a class="grey-text text-lighten-4" href="#"> Whatsapp</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+					© 2021 Copyright Shivam Pandey
+					<a class="grey-text text-lighten-4 right" href="#">Thanks</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="jquery.min.js"></script>
+		<script src="materialize.min.js"></script>
+		<script src="register_script.js"></script>
+	</body>
+
+</html>
